@@ -3,883 +3,738 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Certificação Coach Nutricional® — Método Científico de Coaching Nutricional</title>
+<title>Coach Nutricional® — Certificação Internacional em Saúde</title>
+<meta name="description" content="Transforme orientação em execução. 7 Pilares, 96 blocos, 17 ferramentas, prática supervisionada. MEC registrado.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ================================================================
-   COACH NUTRICIONAL® SALES PAGE
-   Premium Institutional · Scientific Authority · Trust-Based Conversion
-   ================================================================ */
+/* ══════════════════════════════════════════════
+   COACH NUTRICIONAL® — SALES PAGE
+   Brand: Verde Petróleo #0E3B3A · Ouro #C6A664 · Marfim #F5F3EE
+   ══════════════════════════════════════════════ */
 
 :root {
-  /* Brand Colors */
-  --g900:#071e1d; --g800:#092928; --g700:#0E3B3A; --g600:#145452; --g500:#1a6b68;
-  --g400:#23897e; --g300:#3aaba0; --g200:#7fcfc7; --g100:#bfe7e3; --g50:#e5f5f3;
-  --gold:#C6A664; --gold-l:#D4BA82; --gold-d:#9a7d34; --gold-50:#faf6ed; --gold-100:#f5ecd7;
-  --ivory:#F5F3EE; --white:#FFFFFF; --black:#000000;
-  --n100:#F3F4F6; --n200:#E5E7EB; --n300:#D1D5DB; --n400:#9CA3AF; --n500:#6B7280; --n600:#555; --n700:#333; --n800:#1f1f1f;
-  
-  /* Shadows */
-  --shadow-sm:0 1px 3px rgba(14,59,58,.08);
-  --shadow-md:0 4px 12px rgba(14,59,58,.08);
-  --shadow-lg:0 12px 24px rgba(14,59,58,.1);
-  --shadow-xl:0 20px 40px rgba(14,59,58,.12);
-  --shadow-gold:0 4px 14px rgba(198,166,100,.25);
-  
-  /* Radius */
-  --r-sm:4px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-2xl:24px; --r-full:9999px;
-  
-  /* Fonts */
-  --font-display:'Poppins',system-ui,sans-serif;
-  --font-body:'Inter',system-ui,sans-serif;
-  
-  /* Transitions */
-  --ease:cubic-bezier(.25,.1,.25,1);
-  --spring:cubic-bezier(.34,1.56,.64,1);
+  --verde: #0E3B3A; --verde-light: #145452; --verde-dark: #092928; --verde-900: #061C1B;
+  --ouro: #C6A664; --ouro-light: #D4BA82; --ouro-dark: #A88B4A;
+  --marfim: #F5F3EE; --branco: #FFFFFF; --preto: #1A1A1A;
+  --cinza: #6B7280; --cinza-light: #E5E7EB; --cinza-100: #F3F4F6;
+  --red: #DC2626; --green: #16A34A;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --shadow-gold: 0 8px 30px rgba(198,166,100,.25);
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 24px;
+  --ease: cubic-bezier(.4,0,.2,1); --spring: cubic-bezier(.34,1.56,.64,1);
 }
 
-/* ================================================================ RESET & BASE */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-body{font-family:var(--font-body);color:var(--n700);background:var(--white);line-height:1.6;}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif; color: var(--preto);
+  background: var(--branco); line-height: 1.7;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5 { font-family: 'Poppins', sans-serif; line-height: 1.15; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
+.text-center { text-align: center; }
 
-/* ================================================================ NAVIGATION */
-.nav {
-  position:fixed;top:0;left:0;right:0;z-index:1000;
-  background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--n200);transition:all .3s var(--ease);
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(9,41,40,.95); backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(198,166,100,.1);
 }
-.nav.scrolled{box-shadow:var(--shadow-md);}
-.nav-inner{
-  max-width:1200px;margin:0 auto;padding:0 24px;
-  display:flex;align-items:center;justify-content:space-between;height:72px;
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px; max-width: 1140px; margin: 0 auto; padding: 0 28px;
 }
-.nav-logo{font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--g700);letter-spacing:-.5px;}
-.nav-logo span{color:var(--gold);}
-.nav-cta{
-  font-family:var(--font-display);font-weight:600;font-size:14px;
-  background:var(--g700);color:var(--white);padding:10px 24px;border-radius:var(--r-full);
-  border:none;cursor:pointer;transition:all .2s var(--ease);
+.nav-logo {
+  font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700;
+  color: var(--branco); letter-spacing: .3px;
 }
-.nav-cta:hover{background:var(--g800);transform:translateY(-1px);box-shadow:var(--shadow-md);}
+.nav-logo span { color: var(--ouro); }
+.nav-cta {
+  background: var(--ouro); color: var(--verde-dark);
+  font-family: 'Poppins', sans-serif; font-size: 12px; font-weight: 700;
+  padding: 8px 20px; border-radius: var(--r-sm); letter-spacing: .5px;
+  text-transform: uppercase; transition: all .3s var(--ease); border: none; cursor: pointer;
+}
+.nav-cta:hover { background: var(--ouro-light); transform: translateY(-1px); }
 
-/* ================================================================ HERO */
-.hero{
-  padding:140px 24px 80px;background:linear-gradient(180deg,var(--g50) 0%,var(--white) 100%);
-  position:relative;overflow:hidden;
-}
-.hero::before{
-  content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;
-  background:radial-gradient(circle,rgba(198,166,100,.08) 0%,transparent 70%);
-  border-radius:50%;
-}
-.hero-inner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1;}
-.hero-badge{
-  display:inline-block;font-family:var(--font-display);font-size:11px;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;color:var(--gold);
-  background:var(--gold-50);padding:8px 20px;border-radius:var(--r-full);
-  margin-bottom:24px;border:1px solid var(--gold-100);
-}
-.hero-title{
-  font-family:var(--font-display);font-size:56px;font-weight:800;line-height:1.1;
-  color:var(--g800);margin-bottom:24px;letter-spacing:-1px;
-}
-.hero-title .highlight{color:var(--gold);}
-.hero-subtitle{
-  font-size:20px;line-height:1.6;color:var(--n500);max-width:700px;margin:0 auto 40px;
-  font-weight:400;
-}
-.hero-cta{
-  display:inline-flex;align-items:center;gap:12px;
-  font-family:var(--font-display);font-weight:700;font-size:17px;
-  background:var(--gold);color:var(--g900);padding:18px 40px;border-radius:var(--r-full);
-  border:none;cursor:pointer;transition:all .2s var(--ease);box-shadow:var(--shadow-gold);
-}
-.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(198,166,100,.35);}
-.hero-cta::after{content:'→';margin-left:4px;transition:transform .2s var(--ease);}
-.hero-cta:hover::after{transform:translateX(4px);}
-
-.hero-stats{
-  display:flex;justify-content:center;gap:48px;margin-top:56px;flex-wrap:wrap;
-}
-.hero-stat{text-align:center;}
-.hero-stat-value{
-  font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--g700);line-height:1;
-}
-.hero-stat-label{
-  font-size:14px;color:var(--n500);margin-top:4px;font-weight:500;
+/* ===== URGENCY BAR ===== */
+.topbar {
+  background: var(--verde-900); color: var(--ouro); text-align: center;
+  padding: 10px 16px; font-family: 'Poppins', sans-serif; font-size: 13px;
+  font-weight: 500; letter-spacing: .5px; margin-top: 64px;
 }
 
-/* ================================================================ SECTIONS */
-.section{padding:80px 24px;}
-.section-alt{background:var(--ivory);}
-.section-dark{background:var(--g800);color:var(--white);}
-.container{max-width:1200px;margin:0 auto;}
-.container-narrow{max-width:800px;margin:0 auto;}
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(165deg, var(--verde) 0%, var(--verde-dark) 50%, var(--verde-900) 100%);
+  color: var(--branco); padding: 100px 0 120px; text-align: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -40%; left: -20%; width: 140%; height: 140%;
+  background: radial-gradient(ellipse at 30% 40%, rgba(198,166,100,.07) 0%, transparent 55%);
+}
+.hero-inner { position: relative; z-index: 1; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(198,166,100,.4); color: var(--ouro);
+  font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  padding: 8px 24px; border-radius: 30px; margin-bottom: 32px;
+}
+.hero h1 {
+  font-size: clamp(34px, 5.5vw, 58px); font-weight: 800; line-height: 1.08;
+  margin-bottom: 24px; max-width: 820px; margin-left: auto; margin-right: auto;
+}
+.hero h1 span { color: var(--ouro); }
+.hero .subtitle {
+  font-size: clamp(16px, 2.2vw, 19px); font-weight: 300; opacity: .85;
+  max-width: 660px; margin: 0 auto 40px; line-height: 1.7;
+}
+.btn-primary {
+  display: inline-block; background: var(--ouro); color: var(--verde-dark);
+  font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700;
+  padding: 17px 52px; border-radius: var(--r-sm); letter-spacing: .5px;
+  text-transform: uppercase; transition: all .3s var(--ease); border: none;
+  cursor: pointer; box-shadow: var(--shadow-gold);
+}
+.btn-primary:hover { background: var(--ouro-light); transform: translateY(-2px); }
 
-.section-header{text-align:center;margin-bottom:64px;}
-.section-label{
-  font-family:var(--font-display);font-size:12px;font-weight:700;letter-spacing:3px;
-  text-transform:uppercase;color:var(--gold);margin-bottom:12px;
+.trust-row {
+  display: flex; justify-content: center; gap: 32px; margin-top: 48px;
+  font-size: 13px; opacity: .7; flex-wrap: wrap;
 }
-.section-title{
-  font-family:var(--font-display);font-size:42px;font-weight:700;line-height:1.2;
-  color:var(--g800);margin-bottom:16px;letter-spacing:-.5px;
-}
-.section-dark .section-title{color:var(--white);}
-.section-desc{
-  font-size:18px;line-height:1.7;color:var(--n500);max-width:700px;margin:0 auto;
-}
-.section-dark .section-desc{color:rgba(255,255,255,.7);}
+.trust-row span { display: flex; align-items: center; gap: 6px; }
 
-/* ================================================================ PROBLEM/SOLUTION */
-.problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;}
-.problem-card{
-  background:var(--white);border-radius:var(--r-xl);padding:32px;
-  border:1px solid var(--n200);transition:all .3s var(--ease);
+/* ===== LOGO STRIP ===== */
+.logo-strip {
+  background: var(--marfim); padding: 48px 0; border-top: 1px solid var(--cinza-light);
+  border-bottom: 1px solid var(--cinza-light);
 }
-.problem-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--g200);}
-.problem-icon{
-  width:56px;height:56px;background:var(--g50);border-radius:var(--r-lg);
-  display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px;
+.logo-strip-title {
+  text-align: center; font-size: 12px; font-weight: 600; color: var(--cinza);
+  letter-spacing: 2px; text-transform: uppercase; margin-bottom: 32px;
 }
-.problem-title{
-  font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--g700);
-  margin-bottom:12px;
+.logo-grid {
+  display: flex; justify-content: center; align-items: center; gap: 56px; flex-wrap: wrap;
 }
-.problem-text{font-size:15px;line-height:1.7;color:var(--n600);}
+.logo-item {
+  opacity: .5; transition: opacity .3s; height: 40px; display: flex; align-items: center;
+}
+.logo-item:hover { opacity: .8; }
+.logo-item img { height: 100%; width: auto; filter: grayscale(100%); }
 
-/* ================================================================ METHOD */
-.method-framework{
-  background:linear-gradient(135deg,var(--g800) 0%,var(--g700) 100%);
-  border-radius:var(--r-2xl);padding:56px 48px;color:var(--white);
-  box-shadow:var(--shadow-xl);position:relative;overflow:hidden;
+/* ===== SECTION ===== */
+.section { padding: 80px 0; }
+.section-marfim { background: var(--marfim); }
+.section-dark { background: var(--verde-dark); color: var(--branco); }
+.section-label {
+  font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--ouro);
+  text-align: center; margin-bottom: 12px;
 }
-.method-framework::before{
-  content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;
-  background:radial-gradient(circle,rgba(198,166,100,.12) 0%,transparent 70%);
-  border-radius:50%;
+.section-title {
+  font-size: clamp(28px, 4vw, 42px); font-weight: 700; text-align: center;
+  margin-bottom: 48px; line-height: 1.2;
 }
-.method-title{
-  font-family:var(--font-display);font-size:32px;font-weight:700;text-align:center;
-  margin-bottom:48px;position:relative;z-index:1;
-}
-.method-title .highlight{color:var(--gold);}
 
-.pillars-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;
-  margin-bottom:40px;position:relative;z-index:1;
+/* ===== PROBLEMA ===== */
+.problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto; }
+.problem-card {
+  background: var(--branco); border-radius: var(--r-lg); padding: 32px;
+  border: 1px solid var(--cinza-light); transition: all .3s;
 }
-.pillar-card{
-  background:rgba(255,255,255,.08);backdrop-filter:blur(10px);
-  border-radius:var(--r-lg);padding:24px;border:1px solid rgba(255,255,255,.1);
-  transition:all .3s var(--ease);
+.problem-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.problem-icon {
+  font-size: 32px; margin-bottom: 16px; display: block;
 }
-.pillar-card:hover{background:rgba(255,255,255,.12);border-color:var(--gold);transform:translateY(-2px);}
-.pillar-number{
-  font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--gold);
-  margin-bottom:8px;
+.problem-title {
+  font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 600;
+  margin-bottom: 12px; color: var(--verde);
 }
-.pillar-name{
-  font-family:var(--font-display);font-size:18px;font-weight:600;margin-bottom:8px;
-}
-.pillar-desc{font-size:14px;line-height:1.6;opacity:.8;}
+.problem-text { font-size: 15px; line-height: 1.7; color: var(--cinza); }
 
-.module8-highlight{
-  background:var(--gold);color:var(--g900);border-radius:var(--r-xl);padding:32px;
-  text-align:center;position:relative;z-index:1;
+/* ===== STACK HORMOZI ===== */
+.stack-container {
+  max-width: 800px; margin: 0 auto; background: var(--branco);
+  border-radius: var(--r-xl); padding: 48px; box-shadow: var(--shadow-lg);
+  border: 2px solid var(--ouro);
 }
-.module8-title{
-  font-family:var(--font-display);font-size:24px;font-weight:700;margin-bottom:12px;
+.stack-header {
+  text-align: center; margin-bottom: 40px; padding-bottom: 32px;
+  border-bottom: 2px solid var(--cinza-light);
 }
-.module8-desc{font-size:15px;line-height:1.6;opacity:.9;}
+.stack-badge {
+  display: inline-block; background: var(--ouro); color: var(--verde-dark);
+  font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px;
+  border-radius: 20px; margin-bottom: 16px;
+}
+.stack-title {
+  font-family: 'Poppins', sans-serif; font-size: 32px; font-weight: 700;
+  margin-bottom: 12px; color: var(--verde-dark);
+}
+.stack-subtitle {
+  font-size: 16px; color: var(--cinza);
+}
 
-/* ================================================================ BENEFITS */
-.benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px;}
-.benefit-item{display:flex;gap:20px;}
-.benefit-icon{
-  width:48px;height:48px;background:var(--gold-50);border-radius:var(--r-lg);
-  flex-shrink:0;display:flex;align-items:center;justify-content:center;
-  font-size:24px;color:var(--gold);
+.stack-items { margin-bottom: 32px; }
+.stack-item {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: 20px 0; border-bottom: 1px solid var(--cinza-light);
 }
-.benefit-content h3{
-  font-family:var(--font-display);font-size:20px;font-weight:600;color:var(--g700);
-  margin-bottom:8px;
+.stack-item-content h4 {
+  font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600;
+  margin-bottom: 6px; color: var(--preto);
 }
-.benefit-content p{font-size:15px;line-height:1.7;color:var(--n600);}
+.stack-item-content p {
+  font-size: 14px; line-height: 1.6; color: var(--cinza);
+}
+.stack-item-value {
+  font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700;
+  color: var(--cinza); white-space: nowrap; margin-left: 24px;
+}
 
-/* ================================================================ TOOLS */
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
-.tool-card{
-  background:var(--white);border-radius:var(--r-lg);padding:24px;
-  border:2px solid var(--n200);transition:all .3s var(--ease);
+.stack-total {
+  background: var(--cinza-100); border-radius: var(--r-md); padding: 24px;
+  text-align: center; margin-bottom: 24px;
 }
-.tool-card:hover{border-color:var(--gold);box-shadow:var(--shadow-md);}
-.tool-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-.tool-badge{
-  font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:1px;
-  padding:4px 10px;border-radius:var(--r-full);
+.stack-total-label {
+  font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 600;
+  color: var(--cinza); text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 8px;
 }
-.tool-badge.type-a{background:var(--g100);color:var(--g700);}
-.tool-badge.type-b{background:var(--gold-100);color:var(--gold-d);}
-.tool-name{
-  font-family:var(--font-display);font-size:16px;font-weight:600;color:var(--g700);
+.stack-total-value {
+  font-family: 'Poppins', sans-serif; font-size: 48px; font-weight: 800;
+  color: var(--preto); line-height: 1; text-decoration: line-through;
+  text-decoration-color: var(--red); text-decoration-thickness: 3px;
 }
-.tool-desc{font-size:14px;line-height:1.6;color:var(--n600);}
 
-/* ================================================================ PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px;max-width:900px;margin:0 auto;}
-.pricing-card{
-  background:var(--white);border-radius:var(--r-2xl);padding:40px;
-  border:2px solid var(--n200);transition:all .3s var(--ease);position:relative;
+.stack-pricing {
+  text-align: center; padding: 32px; background: linear-gradient(135deg, var(--verde) 0%, var(--verde-dark) 100%);
+  border-radius: var(--r-lg); color: var(--branco); margin-bottom: 24px;
 }
-.pricing-card.featured{border-color:var(--gold);box-shadow:var(--shadow-xl);}
-.pricing-card.featured::before{
-  content:'Recomendado';position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-  background:var(--gold);color:var(--g900);font-family:var(--font-display);
-  font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
-  padding:6px 20px;border-radius:var(--r-full);
+.stack-pricing-label {
+  font-size: 14px; font-weight: 600; opacity: .8; margin-bottom: 12px;
+  text-transform: uppercase; letter-spacing: 1px;
 }
-.pricing-header{text-align:center;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--n200);}
-.pricing-name{
-  font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--g700);margin-bottom:12px;
+.stack-pricing-value {
+  font-family: 'Poppins', sans-serif; font-size: 56px; font-weight: 800;
+  line-height: 1; margin-bottom: 8px;
 }
-.pricing-price{
-  font-family:var(--font-display);font-size:48px;font-weight:800;color:var(--g800);line-height:1;
+.stack-pricing-value small { font-size: 28px; }
+.stack-pricing-sub {
+  font-size: 15px; opacity: .8; margin-bottom: 24px;
 }
-.pricing-price small{font-size:18px;font-weight:500;color:var(--n500);}
-.pricing-period{font-size:14px;color:var(--n500);margin-top:8px;}
-.pricing-features{list-style:none;margin-bottom:32px;}
-.pricing-features li{
-  padding:12px 0;border-bottom:1px solid var(--n100);font-size:15px;color:var(--n700);
-  display:flex;align-items:center;gap:12px;
+.stack-pricing-cta {
+  display: block; width: 100%; background: var(--ouro); color: var(--verde-dark);
+  font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 700;
+  padding: 18px; border-radius: var(--r-md); text-transform: uppercase;
+  letter-spacing: .5px; transition: all .3s; border: none; cursor: pointer;
 }
-.pricing-features li::before{content:'✓';color:var(--gold);font-weight:700;font-size:18px;}
-.pricing-cta{
-  width:100%;font-family:var(--font-display);font-weight:700;font-size:16px;
-  padding:16px;border-radius:var(--r-lg);border:none;cursor:pointer;
-  transition:all .2s var(--ease);
-}
-.pricing-card:not(.featured) .pricing-cta{
-  background:var(--g700);color:var(--white);
-}
-.pricing-card.featured .pricing-cta{
-  background:var(--gold);color:var(--g900);
-}
-.pricing-cta:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);}
+.stack-pricing-cta:hover { background: var(--ouro-light); transform: translateY(-2px); }
 
-/* ================================================================ FAQ */
-.faq-list{max-width:800px;margin:0 auto;}
-.faq-item{
-  background:var(--white);border-radius:var(--r-lg);padding:28px 32px;
-  margin-bottom:16px;border:1px solid var(--n200);
+.stack-trust {
+  display: flex; justify-content: center; gap: 24px; font-size: 13px;
+  color: var(--cinza); flex-wrap: wrap;
 }
-.faq-question{
-  font-family:var(--font-display);font-size:18px;font-weight:600;color:var(--g700);
-  margin-bottom:12px;
-}
-.faq-answer{font-size:15px;line-height:1.7;color:var(--n600);}
+.stack-trust span { display: flex; align-items: center; gap: 6px; }
 
-/* ================================================================ CTA FINAL */
-.cta-final{
-  background:linear-gradient(135deg,var(--g800) 0%,var(--g700) 100%);
-  color:var(--white);text-align:center;padding:80px 24px;position:relative;overflow:hidden;
+/* ===== PILARES ===== */
+.pillars-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px; max-width: 1000px; margin: 0 auto;
 }
-.cta-final::before{
-  content:'';position:absolute;top:-150px;left:-150px;width:500px;height:500px;
-  background:radial-gradient(circle,rgba(198,166,100,.15) 0%,transparent 70%);
-  border-radius:50%;
+.pillar-card {
+  background: rgba(255,255,255,.08); backdrop-filter: blur(10px);
+  border-radius: var(--r-lg); padding: 28px; border: 1px solid rgba(255,255,255,.1);
+  transition: all .3s;
 }
-.cta-final-inner{max-width:700px;margin:0 auto;position:relative;z-index:1;}
-.cta-final-title{
-  font-family:var(--font-display);font-size:42px;font-weight:700;line-height:1.2;
-  margin-bottom:24px;
+.pillar-card:hover { background: rgba(255,255,255,.12); border-color: var(--ouro); transform: translateY(-2px); }
+.pillar-number {
+  font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 700;
+  color: var(--ouro); margin-bottom: 12px; letter-spacing: 1px;
 }
-.cta-final-title .highlight{color:var(--gold);}
-.cta-final-desc{font-size:18px;line-height:1.7;opacity:.9;margin-bottom:40px;}
-.cta-final-btn{
-  display:inline-flex;align-items:center;gap:12px;
-  font-family:var(--font-display);font-weight:700;font-size:18px;
-  background:var(--gold);color:var(--g900);padding:20px 48px;border-radius:var(--r-full);
-  border:none;cursor:pointer;transition:all .2s var(--ease);box-shadow:var(--shadow-gold);
+.pillar-name {
+  font-family: 'Poppins', sans-serif; font-size: 19px; font-weight: 600;
+  margin-bottom: 8px; color: var(--branco);
 }
-.cta-final-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(198,166,100,.35);}
+.pillar-desc { font-size: 14px; line-height: 1.6; opacity: .8; }
 
-/* ================================================================ FOOTER */
-.footer{background:var(--g900);color:rgba(255,255,255,.6);padding:48px 24px;text-align:center;}
-.footer-logo{
-  font-family:var(--font-display);font-size:20px;font-weight:700;color:var(--white);
-  margin-bottom:16px;
+/* ===== FAQ ===== */
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item {
+  background: var(--branco); border-radius: var(--r-lg); padding: 24px 28px;
+  margin-bottom: 16px; border: 1px solid var(--cinza-light); cursor: pointer;
+  transition: all .3s;
 }
-.footer-logo span{color:var(--gold);}
-.footer-text{font-size:14px;line-height:1.7;}
+.faq-item:hover { box-shadow: var(--shadow-sm); }
+.faq-q {
+  font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 600;
+  color: var(--verde); display: flex; justify-content: space-between;
+  align-items: center;
+}
+.faq-arrow {
+  font-size: 24px; font-weight: 300; color: var(--ouro); transition: transform .3s;
+}
+.faq-item.open .faq-arrow { transform: rotate(45deg); }
+.faq-a {
+  font-size: 15px; line-height: 1.7; color: var(--cinza); margin-top: 0;
+  max-height: 0; overflow: hidden; transition: all .3s;
+}
+.faq-item.open .faq-a { margin-top: 16px; max-height: 500px; }
 
-/* ================================================================ RESPONSIVE */
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--verde-900); color: rgba(255,255,255,.6); padding: 56px 28px;
+  text-align: center; font-size: 14px;
+}
+.footer-logo {
+  font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700;
+  color: var(--branco); margin-bottom: 8px;
+}
+.footer-slogan { color: var(--ouro); font-size: 13px; margin-bottom: 24px; }
+.footer-disclaimer {
+  margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1);
+  font-size: 12px; opacity: .5; line-height: 1.6; max-width: 700px; margin-left: auto; margin-right: auto;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .hero-title{font-size:36px;}
-  .hero-subtitle{font-size:17px;}
-  .section-title{font-size:32px;}
-  .pricing-grid{grid-template-columns:1fr;}
-  .hero-stats{gap:32px;}
+  .hero h1 { font-size: 32px; }
+  .section-title { font-size: 28px; }
+  .logo-grid { gap: 32px; }
+  .stack-container { padding: 32px 24px; }
+  .stack-pricing-value { font-size: 48px; }
+  .stack-item { flex-direction: column; align-items: flex-start; }
+  .stack-item-value { margin-left: 0; margin-top: 8px; }
 }
 
-/* ================================================================ ANIMATIONS */
-@keyframes fadeInUp{
-  from{opacity:0;transform:translateY(30px);}
-  to{opacity:1;transform:translateY(0);}
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-.fade-in-up{animation:fadeInUp .6s var(--ease) forwards;}
-
-/* ================================================================ UTILITIES */
-.text-center{text-align:center;}
-.mb-8{margin-bottom:8px;}
-.mb-16{margin-bottom:16px;}
-.mb-24{margin-bottom:24px;}
-.mb-32{margin-bottom:32px;}
-.mt-40{margin-top:40px;}
+.reveal {
+  opacity: 0; animation: fadeUp .6s ease forwards;
+  animation-play-state: paused;
+}
+.reveal.visible { animation-play-state: running; }
 </style>
 </head>
 <body>
 
-<!-- ================================================================ NAVIGATION -->
-<nav class="nav">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">Coach Nutricional<span>®</span></div>
-    <button class="nav-cta" onclick="scrollToPricing()">Garantir Vaga</button>
+    <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775161744/Logo_Coach_Nutricional_945x945_lro5kh.png" alt="Coach Nutricional" style="height: 36px;">
+    <button class="nav-cta" onclick="scrollTo('#investimento')">Garantir Vaga</button>
   </div>
 </nav>
 
-<!-- ================================================================ HERO -->
+<!-- ===== URGENCY BAR ===== -->
+<div class="topbar">
+  <strong>Lançamento · Primeira turma</strong> — Vagas limitadas para prática supervisionada
+</div>
+
+<!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Certificação Profissional</div>
-    <h1 class="hero-title">
-      Transforme sua prática em <span class="highlight">resultados mensuráveis</span>
+  <div class="container hero-inner">
+    <div class="hero-badge">CERTIFICAÇÃO PROFISSIONAL</div>
+    <h1>
+      Transforme orientação em <span>execução</span>.
     </h1>
-    <p class="hero-subtitle">
+    <p class="subtitle">
       A primeira certificação brasileira em Coaching Nutricional baseada em evidências, 
-      com método estruturado de 12 sessões e plataforma clínica integrada.
+      com 7 Pilares, 96 blocos temáticos, 17 ferramentas operacionais e prática supervisionada. 
+      Curso de extensão registrado no MEC.
     </p>
-    <button class="hero-cta" onclick="scrollToPricing()">
-      Iniciar Certificação
+    <button class="btn-primary" onclick="scrollTo('#investimento')">
+      Garantir Minha Vaga
     </button>
     
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-value">96</div>
-        <div class="hero-stat-label">Blocos Temáticos</div>
+    <div class="trust-row">
+      <span>🔒 Pagamento Seguro</span>
+      <span>📜 Garantia 7 Dias</span>
+      <span>🎓 MEC Registrado</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOGO STRIP ===== -->
+<section class="logo-strip">
+  <div class="container">
+    <div class="logo-strip-title">Metodologia desenvolvida com base na análise de programas de</div>
+    <div class="logo-grid">
+      <div class="logo-item">
+        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166004/233-2335859_harvard-med-school-logo-01-physician_esnuxx.png" alt="Harvard Medical School">
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">26</div>
-        <div class="hero-stat-label">Ferramentas Clínicas</div>
+      <div class="logo-item">
+        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166025/Mayo_Clinic_Logo_2023_lo0hk7.png" alt="Mayo Clinic">
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">12</div>
-        <div class="hero-stat-label">Sessões Estruturadas</div>
+      <div class="logo-item">
+        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166053/ioc-logo_sm9rek.png" alt="IOC">
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================================ PROBLEMA -->
+<!-- ===== PROBLEMA ===== -->
 <section class="section">
   <div class="container">
-    <div class="section-header">
-      <div class="section-label">O Desafio</div>
-      <h2 class="section-title">Por que a mudança de comportamento alimentar é tão difícil?</h2>
-      <p class="section-desc">
-        A maioria dos nutricionistas enfrenta os mesmos obstáculos: pacientes que não aderem, 
-        resultados inconsistentes e falta de um método estruturado para conduzir transformações reais.
-      </p>
-    </div>
+    <div class="section-label reveal">O Desafio</div>
+    <h2 class="section-title reveal">Por que seus pacientes não seguem o plano?</h2>
     
     <div class="problem-grid">
-      <div class="problem-card">
-        <div class="problem-icon">📊</div>
-        <h3 class="problem-title">Falta de Estrutura</h3>
+      <div class="problem-card reveal">
+        <span class="problem-icon">📊</span>
+        <h3 class="problem-title">Orientação Genérica</h3>
         <p class="problem-text">
-          Sem um protocolo claro, cada sessão vira improvisação. Isso reduz confiança, 
-          desperdiça tempo e dificulta a replicação de bons resultados.
+          "Coma mais vegetais. Durma melhor. Faça exercício." 
+          O paciente sabe o que deveria fazer, mas não consegue sustentar.
         </p>
       </div>
       
-      <div class="problem-card">
-        <div class="problem-icon">🔄</div>
+      <div class="problem-card reveal">
+        <span class="problem-icon">🔄</span>
         <h3 class="problem-title">Baixa Adesão</h3>
         <p class="problem-text">
-          Pacientes abandonam o processo antes da consolidação. Falta clareza sobre próximos passos, 
-          métricas de progresso e estratégias de engajamento.
+          Plano excelente que morre na segunda semana. Falta estrutura para 
+          acompanhar rotina, gatilhos e contexto real.
         </p>
       </div>
       
-      <div class="problem-card">
-        <div class="problem-icon">⚡</div>
-        <h3 class="problem-title">Resultados Imprevisíveis</h3>
+      <div class="problem-card reveal">
+        <span class="problem-icon">⚡</span>
+        <h3 class="problem-title">Ausência de Método</h3>
         <p class="problem-text">
-          Sem measurement-based care e stepped-care logic, não há como saber quando escalar, 
-          quando manter ou quando encaminhar.
+          Sem protocolo claro, cada sessão vira improvisação. Isso reduz 
+          confiança e desperdiça tempo do profissional.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================================ MÉTODO -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">O Método</div>
-      <h2 class="section-title">7 Pilares Científicos + Módulo de Implementação Clínica</h2>
-      <p class="section-desc">
-        Uma formação completa que une teoria, evidência e prática. Você domina os frameworks 
-        antes de aplicá-los em um protocolo estruturado de 12 sessões.
-      </p>
-    </div>
-    
-    <div class="method-framework">
-      <h3 class="method-title">
-        Formação Técnica em <span class="highlight">7 Pilares Fundamentais</span>
-      </h3>
-      
-      <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-number">PILAR 1</div>
-          <div class="pillar-name">Florescimento Humano</div>
-          <div class="pillar-desc">Whole-person health e determinantes sociais da saúde</div>
-        </div>
-        
-        <div class="pillar-card">
-          <div class="pillar-number">PILAR 2</div>
-          <div class="pillar-name">Mudança de Comportamento</div>
-          <div class="pillar-desc">Frameworks validados e psicologia do hábito</div>
-        </div>
-        
-        <div class="pillar-card">
-          <div class="pillar-number">PILAR 3</div>
-          <div class="pillar-name">Funções Executivas</div>
-          <div class="pillar-desc">Neurociência cognitiva aplicada à nutrição</div>
-        </div>
-        
-        <div class="pillar-card">
-          <div class="pillar-number">PILAR 4</div>
-          <div class="pillar-name">Food Noise & Regulação</div>
-          <div class="pillar-desc">Sinais de fome, saciedade e ambiente alimentar</div>
-        </div>
-        
-        <div class="pillar-card">
-          <div class="pillar-number">PILAR 5</div>
-          <div class="pillar-name">Entrevista Motivacional</div>
-          <div class="pillar-desc">MI aplicada ao contexto nutricional (OARS, ambivalência)</div>
-        </div>
-        
-        <div class="pillar-card">
-          <div class="pillar-number">PILAR 6</div>
-          <div class="pillar-name">Measurement-Based Care</div>
-          <div class="pillar-desc">Métricas, rastreamento e decisão baseada em dados</div>
-        </div>
-        
-        <div class="pillar-card">
-          <div class="pillar-number">PILAR 7</div>
-          <div class="pillar-name">Prevenção de Iatrogenias</div>
-          <div class="pillar-desc">Segurança clínica e ética na intervenção nutricional</div>
-        </div>
-      </div>
-      
-      <div class="module8-highlight">
-        <div class="module8-title">+ MÓDULO 8: Implementação Clínica</div>
-        <div class="module8-desc">
-          Protocolo completo de 12 sessões com ferramentas, scripts, critérios de decisão, 
-          automações WhatsApp e plataforma clínica integrada para aplicar tudo na prática.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================ BENEFÍCIOS -->
-<section class="section">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Transformação</div>
-      <h2 class="section-title">O que você ganha com a certificação</h2>
-    </div>
-    
-    <div class="benefits-grid">
-      <div class="benefit-item">
-        <div class="benefit-icon">🎯</div>
-        <div class="benefit-content">
-          <h3>Método Replicável</h3>
-          <p>Protocolo sessão-por-sessão com objetivos, ferramentas e critérios de avanço claros. 
-          Você sabe exatamente o que fazer em cada encontro.</p>
-        </div>
-      </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">📈</div>
-        <div class="benefit-content">
-          <h3>Measurement-Based Care</h3>
-          <p>Decisões guiadas por métricas reais. Stepped-care logic para escalar intervenções 
-          quando necessário ou encaminhar com segurança.</p>
-        </div>
-      </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">🛠️</div>
-        <div class="benefit-content">
-          <h3>26 Ferramentas Prontas</h3>
-          <p>12 ferramentas de mercado (MI, DISC, PHQ-9, GAD-7) + 14 instrumentos proprietários 
-          (ISR, RSI, EOF, TRC, GLP e mais).</p>
-        </div>
-      </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">💻</div>
-        <div class="benefit-content">
-          <h3>Plataforma Clínica</h3>
-          <p>SaaS profissional para gerenciar casos, sessões, métricas e alertas. 
-          Automação WhatsApp pós-sessão incluída.</p>
-        </div>
-      </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">🏆</div>
-        <div class="benefit-content">
-          <h3>Certificação Oficial</h3>
-          <p>Selo Coach Nutricional® reconhecido no mercado. Acesso renovável anualmente 
-          com atualizações contínuas do método.</p>
-        </div>
-      </div>
-      
-      <div class="benefit-item">
-        <div class="benefit-icon">🤝</div>
-        <div class="benefit-content">
-          <h3>Comunidade Exclusiva</h3>
-          <p>Network com outros profissionais certificados. Supervisão de casos, 
-          discussões técnicas e evolução contínua.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================ FERRAMENTAS -->
+<!-- ===== PILARES ===== -->
 <section class="section section-dark">
   <div class="container">
-    <div class="section-header">
-      <div class="section-label">Arsenal Clínico</div>
-      <h2 class="section-title">26 Ferramentas para Transformação Real</h2>
-      <p class="section-desc">
-        Instrumentos validados de mercado + ferramentas proprietárias exclusivas. 
-        Cada uma com propósito, momento de aplicação e integração ao protocolo.
-      </p>
-    </div>
+    <div class="section-label reveal">A Metodologia</div>
+    <h2 class="section-title reveal" style="color:var(--branco);">
+      7 Pilares Científicos + 17 Ferramentas Operacionais
+    </h2>
     
-    <div class="tools-grid">
-      <!-- Tipo A: Market Tools -->
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-a">TIPO A</span>
-          <h4 class="tool-name">DISC Behavior</h4>
-        </div>
-        <p class="tool-desc">Mapeamento comportamental para personalizar comunicação e estratégias</p>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <div class="pillar-number">PILAR 1</div>
+        <div class="pillar-name">Florescimento Humano</div>
+        <div class="pillar-desc">Whole-person health e determinantes sociais da saúde</div>
       </div>
       
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-a">TIPO A</span>
-          <h4 class="tool-name">Motivational Interviewing</h4>
-        </div>
-        <p class="tool-desc">Framework completo de MI aplicado ao contexto nutricional</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-number">PILAR 2</div>
+        <div class="pillar-name">Mudança de Comportamento</div>
+        <div class="pillar-desc">Frameworks validados e psicologia do hábito</div>
       </div>
       
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-a">TIPO A</span>
-          <h4 class="tool-name">PHQ-9 / GAD-7</h4>
-        </div>
-        <p class="tool-desc">Rastreamento de depressão e ansiedade para encaminhamento seguro</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-number">PILAR 3</div>
+        <div class="pillar-name">Funções Executivas</div>
+        <div class="pillar-desc">Neurociência cognitiva aplicada à nutrição</div>
       </div>
       
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-a">TIPO A</span>
-          <h4 class="tool-name">SCOFF / BES</h4>
-        </div>
-        <p class="tool-desc">Screening de transtornos alimentares e compulsão alimentar</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-number">PILAR 4</div>
+        <div class="pillar-name">Food Noise & Regulação</div>
+        <div class="pillar-desc">Sinais de fome, saciedade e ambiente alimentar</div>
       </div>
       
-      <!-- Tipo B: Proprietary Tools -->
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">ISR — Inventário de Saúde Relacional</h4>
-        </div>
-        <p class="tool-desc">Mapeamento do sistema social e determinantes relacionais</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-number">PILAR 5</div>
+        <div class="pillar-name">Entrevista Motivacional</div>
+        <div class="pillar-desc">MI aplicada ao contexto nutricional (OARS, ambivalência)</div>
       </div>
       
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">RSI — Radar de Sinais Internos</h4>
-        </div>
-        <p class="tool-desc">Awareness de sinais de fome, saciedade e food noise</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-number">PILAR 6</div>
+        <div class="pillar-name">Measurement-Based Care</div>
+        <div class="pillar-desc">Métricas, rastreamento e decisão baseada em dados</div>
       </div>
       
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">EOF — Escala de Obesidade Funcional</h4>
-        </div>
-        <p class="tool-desc">Métrica de impacto funcional além do IMC tradicional</p>
-      </div>
-      
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">TRC — Trilha de Retorno à Consistência</h4>
-        </div>
-        <p class="tool-desc">Protocolo de reconexão após rupturas ou recaídas</p>
-      </div>
-      
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">GLP — Guia de Leitura de Padrões</h4>
-        </div>
-        <p class="tool-desc">Identificação de gatilhos e ciclos comportamentais</p>
-      </div>
-      
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">SRR — Script de Retorno Rápido</h4>
-        </div>
-        <p class="tool-desc">Estratégia anti-catastrofização para lapsos isolados</p>
-      </div>
-      
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">R12S — Relatório 12 Sessões</h4>
-        </div>
-        <p class="tool-desc">Documento de alta com síntese completa do protocolo</p>
-      </div>
-      
-      <div class="tool-card">
-        <div class="tool-header">
-          <span class="tool-badge type-b">TIPO B</span>
-          <h4 class="tool-name">+ 15 ferramentas adicionais</h4>
-        </div>
-        <p class="tool-desc">ABC Mapping, Decision Balance, If-Then Plans, SMART Goals, COM-B e mais</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-number">PILAR 7</div>
+        <div class="pillar-name">Prevenção de Iatrogenias</div>
+        <div class="pillar-desc">Segurança clínica e ética na intervenção nutricional</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================================ INVESTIMENTO -->
-<section class="section" id="pricing">
+<!-- ===== INVESTIMENTO (STACK HORMOZI) ===== -->
+<section class="section section-marfim" id="investimento">
   <div class="container">
-    <div class="section-header">
-      <div class="section-label">Investimento</div>
-      <h2 class="section-title">Escolha seu plano de certificação</h2>
-      <p class="section-desc">
-        Acesso anual renovável com atualizações contínuas do método, novas ferramentas 
-        e evolução da plataforma clínica.
-      </p>
-    </div>
+    <div class="section-label reveal">Investimento</div>
+    <h2 class="section-title reveal">Tudo que você recebe na certificação</h2>
     
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <h3 class="pricing-name">Base</h3>
-          <div class="pricing-price">
-            R$ 497<small>/ano</small>
-          </div>
-          <div class="pricing-period">Renovação anual obrigatória</div>
-        </div>
-        
-        <ul class="pricing-features">
-          <li>Acesso completo aos 7 Pilares</li>
-          <li>Módulo 8 de implementação clínica</li>
-          <li>Protocolo de 12 sessões estruturado</li>
-          <li>26 ferramentas clínicas (A + B)</li>
-          <li>Plataforma clínica básica</li>
-          <li>Comunidade de profissionais</li>
-          <li>Certificação oficial Coach Nutricional®</li>
-        </ul>
-        
-        <button class="pricing-cta">Começar com Base</button>
+    <div class="stack-container reveal">
+      <div class="stack-header">
+        <div class="stack-badge">Lançamento · Primeira Turma</div>
+        <h3 class="stack-title">Certificação Completa Coach Nutricional®</h3>
+        <p class="stack-subtitle">Quebre o valor total da oferta para entender o que está incluído</p>
       </div>
       
-      <div class="pricing-card featured">
-        <div class="pricing-header">
-          <h3 class="pricing-name">Premium</h3>
-          <div class="pricing-price">
-            R$ 1.497<small>/ano</small>
+      <div class="stack-items">
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Certificação Completa (Introdução + 7 Pilares)</h4>
+            <p>96 blocos temáticos organizados em formação técnica profunda, com frameworks validados e evidências científicas</p>
           </div>
-          <div class="pricing-period">Renovação anual obrigatória</div>
+          <div class="stack-item-value">R$ 1.200</div>
         </div>
         
-        <ul class="pricing-features">
-          <li>Tudo do plano Base</li>
-          <li>Plataforma clínica completa com IA</li>
-          <li>Automação WhatsApp pós-sessão</li>
-          <li>Templates de sessão personalizáveis</li>
-          <li>Glossário oficial + matriz stepped-care</li>
-          <li>Supervisão mensal de casos (live)</li>
-          <li>Acesso antecipado a novas ferramentas</li>
-          <li>Selo Premium no certificado</li>
-        </ul>
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Protocolo de 12 Sessões (POP)</h4>
+            <p>Roteiro sessão-por-sessão pronto para aplicar, com objetivos, ferramentas e critérios de progressão definidos</p>
+          </div>
+          <div class="stack-item-value">R$ 900</div>
+        </div>
         
-        <button class="pricing-cta">Começar com Premium</button>
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Toolkit "Nível Ouro" com 17 Ferramentas</h4>
+            <p>ISR, RSI, EOF, MEN, AMM, R12S, PRSD, CCS, DAA, TRC, MES, GLP e mais — instrumentos proprietários para aplicação clínica</p>
+          </div>
+          <div class="stack-item-value">R$ 750</div>
+        </div>
+        
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Prática Supervisionada + Avaliação (PSA)</h4>
+            <p>Rodadas de coaching em duplas/trios, mentor coaching com feedback direto e estudos de caso reais com rubrica de competências</p>
+          </div>
+          <div class="stack-item-value">R$ 980</div>
+        </div>
+        
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Membership 1 Ano (Comunidade + Plantões + Atualizações)</h4>
+            <p>Acesso à comunidade de coaches certificados, plantões semanais com especialistas e atualizações de conteúdo</p>
+          </div>
+          <div class="stack-item-value">R$ 1.000</div>
+        </div>
+        
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Kit Físico do Paciente</h4>
+            <p>Sacola personalizada + ímãs de geladeira com mensagens-chave + baralho de micro metas para engajamento diário</p>
+          </div>
+          <div class="stack-item-value">R$ 450</div>
+        </div>
+        
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Troféu Numerado de Conclusão</h4>
+            <p>Troféu físico exclusivo com número de registro, entregue na cerimônia de certificação</p>
+          </div>
+          <div class="stack-item-value">R$ 380</div>
+        </div>
+        
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Certificado de Extensão Registrado no MEC</h4>
+            <p>Certificado oficial emitido por instituição credenciada, com carga horária de 80 horas e validade nacional</p>
+          </div>
+          <div class="stack-item-value">R$ 420</div>
+        </div>
+        
+        <div class="stack-item">
+          <div class="stack-item-content">
+            <h4>Selo Coach Nutricional® com Número de Registro</h4>
+            <p>Selo profissional para uso em consultório, redes sociais, e-mail e materiais, com entrada no diretório oficial</p>
+          </div>
+          <div class="stack-item-value">R$ 400</div>
+        </div>
       </div>
-    </div>
-    
-    <div class="text-center mt-40">
-      <p style="font-size:14px;color:var(--n500);">
-        <strong>Garantia de 7 dias:</strong> Se a certificação não atender suas expectativas, 
-        devolvemos 100% do investimento sem burocracia.
-      </p>
+      
+      <div class="stack-total">
+        <div class="stack-total-label">Valor Total do Programa</div>
+        <div class="stack-total-value">R$ 6.480</div>
+      </div>
+      
+      <div class="stack-pricing">
+        <div style="background: rgba(255,255,255,.15); border-radius: 8px; padding: 16px 20px; margin-bottom: 24px;">
+          <div style="font-size: 13px; opacity: .7; margin-bottom: 8px;">Preço da Certificação</div>
+          <div style="font-size: 32px; font-weight: 700; text-decoration: line-through; text-decoration-color: var(--red); opacity: .6;">R$ 3.900</div>
+        </div>
+        
+        <div style="background: var(--ouro); color: var(--verde-dark); border-radius: 8px; padding: 12px 20px; margin-bottom: 20px; font-weight: 700; font-size: 14px; letter-spacing: .5px; text-transform: uppercase;">
+          🎉 Cupom FUNDADORES: -R$ 1.000 (Turma Limitada)
+        </div>
+        
+        <div class="stack-pricing-label">Seu investimento hoje</div>
+        <div class="stack-pricing-value"><small>R$</small> 2.900</div>
+        <div class="stack-pricing-sub">ou até 12× de R$ 290,75 sem juros</div>
+        <button class="stack-pricing-cta">Garantir Minha Vaga Agora</button>
+      </div>
+      
+      <div class="stack-trust">
+        <span>🔒 Pagamento Seguro</span>
+        <span>📜 Garantia 7 Dias</span>
+        <span>🎓 MEC Registrado</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================================ FAQ -->
-<section class="section section-alt">
+<!-- ===== FAQ ===== -->
+<section class="section">
   <div class="container">
-    <div class="section-header">
-      <div class="section-label">Perguntas Frequentes</div>
-      <h2 class="section-title">Dúvidas comuns sobre a certificação</h2>
-    </div>
+    <div class="section-label reveal">Perguntas Frequentes</div>
+    <h2 class="section-title reveal">Dúvidas? Respostas diretas.</h2>
     
     <div class="faq-list">
-      <div class="faq-item">
-        <h4 class="faq-question">Quem pode fazer a certificação?</h4>
-        <p class="faq-answer">
-          Nutricionistas graduados com CRN ativo. Profissionais de outras áreas da saúde 
-          podem fazer mediante análise curricular, mas a certificação é voltada primariamente 
-          para nutricionistas que buscam especialização em mudança de comportamento alimentar.
-        </p>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          Preciso ser nutricionista para me inscrever?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          A certificação é voltada para nutricionistas e profissionais de saúde que atuam com mudança de comportamento alimentar. 
+          Estudantes de nutrição no último ano também podem participar.
+        </div>
       </div>
       
-      <div class="faq-item">
-        <h4 class="faq-question">Quanto tempo dura a formação?</h4>
-        <p class="faq-answer">
-          O conteúdo está dividido em 7 Pilares + Módulo 8, com 96 blocos temáticos no total. 
-          Você pode estudar no seu ritmo, mas recomendamos de 8 a 12 semanas para absorção adequada 
-          antes de começar a aplicar o protocolo de 12 sessões.
-        </p>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          Qual a diferença entre este curso e uma pós-graduação?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          A certificação é um curso de extensão registrado no MEC, com foco 100% ferramental e prático. 
+          Diferente de uma pós (que tem carga horária teórica alta e TCC), aqui você sai com protocolo de 12 sessões, 
+          toolkit de 17 ferramentas e prática supervisionada — pronto para aplicar no consultório.
+        </div>
       </div>
       
-      <div class="faq-item">
-        <h4 class="faq-question">A certificação precisa ser renovada?</h4>
-        <p class="faq-answer">
-          Sim. O acesso é anual (R$ 497 Base ou R$ 1.497 Premium) e precisa ser renovado para manter 
-          a certificação ativa, acesso à plataforma clínica e comunidade. Isso garante que o método 
-          evolui com atualizações científicas e novas ferramentas.
-        </p>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          Quanto tempo tenho para concluir?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          12 meses a partir da data de compra. O membership de 1 ano incluso começa a contar no mesmo momento. 
+          Após o primeiro ano, a renovação é de R$ 1.000/ano para manter acesso à comunidade, plantões e atualizações.
+        </div>
       </div>
       
-      <div class="faq-item">
-        <h4 class="faq-question">O que acontece se eu não renovar?</h4>
-        <p class="faq-answer">
-          Você perde acesso à plataforma clínica, ferramentas, comunidade e não pode mais usar 
-          o selo Coach Nutricional® oficialmente. O conteúdo dos Pilares permanece acessível 
-          por 90 dias após vencimento (período de grace).
-        </p>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          A certificação é reconhecida pelo MEC?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          Sim. O Coach Nutricional® é registrado como curso de extensão no MEC, com certificado emitido por 
+          instituição parceira credenciada. A metodologia foi construída a partir da análise de programas de 
+          referência internacional como Harvard Medical School, Mayo Clinic e IOC.
+        </div>
       </div>
       
-      <div class="faq-item">
-        <h4 class="faq-question">Posso aplicar o método sem a plataforma?</h4>
-        <p class="faq-answer">
-          Tecnicamente sim, mas você perde eficiência significativa. A plataforma centraliza 
-          métricas, automatiza WhatsApp, organiza sessões e alertas. É possível usar planilhas e 
-          ferramentas offline, mas não recomendamos.
-        </p>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          Como funciona a prática supervisionada?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          Você participa de rodadas de coaching (duplas e trios), com roteiros progressivos, mentor coaching com 
+          feedback direto, estudos de caso reais (obesidade, compulsão, recaída, paciente desmotivado) e uma 
+          avaliação prática (PSA) com rubrica de competências.
+        </div>
       </div>
       
-      <div class="faq-item">
-        <h4 class="faq-question">Qual a diferença entre Base e Premium?</h4>
-        <p class="faq-answer">
-          Base (R$ 497/ano) dá acesso ao conteúdo completo, ferramentas e plataforma básica. 
-          Premium (R$ 1.497/ano) adiciona automação WhatsApp, IA, supervisão mensal de casos, 
-          templates personalizáveis e acesso antecipado a novidades.
-        </p>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          O que é o Membership e como funciona a renovação?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          O Membership dá acesso à comunidade de coaches certificados, plantões semanais com especialistas, 
+          atualizações de conteúdo e ferramentas. O primeiro ano está incluso na compra. 
+          A renovação é de R$ 1.000/ano (reajustável por IPCA).
+        </div>
       </div>
       
-      <div class="faq-item">
-        <h4 class="faq-question">O método substitui atendimento psicológico?</h4>
-        <p class="faq-answer">
-          Não. O Coach Nutricional trabalha dentro do escopo nutricional, usando MI e comportamento aplicado. 
-          Casos com PHQ-9 ≥ 10, GAD-7 ≥ 8 ou SCOFF positivo exigem encaminhamento. 
-          O método tem protocolos claros de quando escalar para outros profissionais.
-        </p>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          Qual a relação com Harvard, Mayo Clinic e IOC?
+          <span class="faq-arrow">+</span>
+        </div>
+        <div class="faq-a">
+          Analisamos os programas dessas instituições, nos referenciamos em seus princípios e métodos, e criamos 
+          nossa própria metodologia — os 7 Pilares e o Framework dos 3 Es — adaptada à realidade brasileira. 
+          Não existe parceria formal ou endosso dessas instituições.
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================================ CTA FINAL -->
-<section class="cta-final">
-  <div class="cta-final-inner">
-    <h2 class="cta-final-title">
-      Transforme sua prática em <span class="highlight">autoridade científica</span>
+<!-- ===== CTA FINAL ===== -->
+<section class="section section-dark" style="text-align:center; padding: 88px 0;">
+  <div class="container">
+    <h2 class="section-title reveal" style="color:var(--branco); margin-bottom:20px;">
+      Ciência e Comportamento em Ação.
     </h2>
-    <p class="cta-final-desc">
-      Junte-se aos nutricionistas que aplicam mudança de comportamento baseada em evidências, 
-      com método estruturado, ferramentas validadas e resultados mensuráveis.
+    <p class="reveal" style="font-size:17px; opacity:.75; max-width:560px; margin:0 auto 40px;">
+      Junte-se à primeira turma de coaches nutricionais certificados do Brasil. Vagas limitadas.
     </p>
-    <button class="cta-final-btn" onclick="scrollToPricing()">
-      Garantir Minha Vaga Agora
+    <button class="btn-primary reveal" onclick="scrollTo('#investimento')">
+      Garantir Minha Vaga
     </button>
   </div>
 </section>
 
-<!-- ================================================================ FOOTER -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer">
-  <div class="footer-logo">Coach Nutricional<span>®</span></div>
-  <p class="footer-text">
-    Certificação profissional em Coaching Nutricional baseado em evidências<br>
-    Todos os direitos reservados • Science Play Ecosystem
-  </p>
+  <div class="container">
+    <div class="footer-logo">COACH NUTRICIONAL®</div>
+    <div class="footer-slogan">Ciência e Comportamento em Ação.</div>
+    <p>Certificação Internacional em Saúde · Curso de extensão registrado no MEC</p>
+    <p style="margin-top:4px;">© 2026 Coach Nutricional®. Todos os direitos reservados.</p>
+    <p class="footer-disclaimer">
+      A metodologia Coach Nutricional® foi desenvolvida com base na análise de programas de instituições como 
+      Harvard Medical School, Mayo Clinic e IOC. Não existe parceria, endosso ou certificação formal por parte 
+      dessas instituições. As marcas citadas são propriedade de seus respectivos titulares.
+    </p>
+  </div>
 </footer>
 
-<!-- ================================================================ SCRIPTS -->
+<!-- ===== JAVASCRIPT ===== -->
 <script>
-// Scroll to pricing
-function scrollToPricing() {
-  document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+// Smooth scroll
+function scrollTo(selector) {
+  document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
 }
 
-// Nav shadow on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.querySelector('.nav');
-  if (window.scrollY > 50) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
 });
 
-// Fade in animations on scroll
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
+// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-up');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
-}, observerOptions);
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.problem-card, .benefit-item, .tool-card, .pricing-card, .faq-item').forEach(el => {
-  observer.observe(el);
-});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
