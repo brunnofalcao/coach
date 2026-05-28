@@ -190,24 +190,6 @@ img { max-width: 100%; display: block; }
 }
 .nav-cta:hover { background: var(--ouro-light); transform: translateY(-1px); }
 
-.mobile-sticky-cta {
-  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 1100;
-  display: none; align-items: center; justify-content: center;
-  min-height: 56px; padding: 16px 20px;
-  border: none; border-radius: 16px;
-  background: var(--ouro); color: var(--verde-dark);
-  font-family: 'Poppins', sans-serif; font-size: 15px; font-weight: 700;
-  letter-spacing: .4px; text-transform: uppercase;
-  box-shadow: 0 18px 48px rgba(0,0,0,.22), 0 8px 24px rgba(198,166,100,.22);
-  opacity: 0; visibility: hidden; pointer-events: none;
-  transform: translateY(18px);
-  transition: opacity .28s var(--ease), transform .28s var(--ease), visibility .28s var(--ease);
-}
-.mobile-sticky-cta.is-visible {
-  opacity: 1; visibility: visible; pointer-events: auto;
-  transform: translateY(0);
-}
-
 /* ===== URGENCY BAR ===== */
 .topbar {
   background: var(--verde-900); color: var(--ouro); text-align: center;
@@ -463,18 +445,6 @@ img { max-width: 100%; display: block; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  body { padding-bottom: 88px; }
-  .navbar { min-height: 64px; }
-  .nav-inner { justify-content: center; padding: 0 20px; }
-  .nav-logo-wrap {
-    width: 220px; height: 40px; flex: 0 0 220px; justify-content: center;
-  }
-  .nav-logo-img {
-    height: 40px; transform: scale(3.3) translateX(0);
-    transform-origin: center center;
-  }
-  .nav-cta { display: none; }
-  .mobile-sticky-cta { display: flex; }
   .hero h1 { font-size: 32px; }
   .section-title { font-size: 28px; }
   .logo-grid { gap: 32px; }
@@ -826,7 +796,7 @@ img { max-width: 100%; display: block; }
 <nav class="navbar">
   <div class="nav-inner">
     <div class="nav-logo-wrap">
-      <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775161744/Logo_Coach_Nutricional_945x945_lro5kh.png" alt="Coach Nutricional" class="nav-logo-img">
+      <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775161744/Logo_Coach_Nutricional_945x945_lro5kh.png" alt="Coach Nutricional®" class="nav-logo-img">
     </div>
     <button class="nav-cta" onclick="scrollTo('#investimento')">Garantir Vaga</button>
   </div>
@@ -849,7 +819,7 @@ img { max-width: 100%; display: block; }
       com 7 Pilares, 96 blocos temáticos, 17 ferramentas operacionais e prática supervisionada. 
       Curso de extensão registrado no MEC.
     </p>
-    <button class="btn-primary" id="hero-cta" onclick="scrollTo('#investimento')">
+    <button class="btn-primary" onclick="scrollTo('#investimento')">
       Garantir Minha Vaga
     </button>
     
@@ -867,13 +837,13 @@ img { max-width: 100%; display: block; }
     <div class="logo-strip-title">Metodologia desenvolvida com base na análise de programas de</div>
     <div class="logo-grid">
       <div class="logo-item">
-        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166004/233-2335859_harvard-med-school-logo-01-physician_esnuxx.png" alt="Harvard Medical School">
+        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166004/233-2335859_harvard-med-school-logo-01-physician_esnuxx.png" alt="Coach Nutricional®">
       </div>
       <div class="logo-item">
-        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166025/Mayo_Clinic_Logo_2023_lo0hk7.png" alt="Mayo Clinic">
+        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166025/Mayo_Clinic_Logo_2023_lo0hk7.png" alt="Coach Nutricional®">
       </div>
       <div class="logo-item">
-        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166053/ioc-logo_sm9rek.png" alt="IOC">
+        <img src="https://res.cloudinary.com/dlzrfhwin/image/upload/v1775166053/ioc-logo_sm9rek.png" alt="Coach Nutricional®">
       </div>
     </div>
   </div>
@@ -1605,7 +1575,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Andrei Mayer</div>
           <div class="faculty-title">Especialista</div>
           <div class="faculty-uni">Brasil</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1613,7 +1583,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Luciana Antunes</div>
           <div class="faculty-title">Especialista</div>
           <div class="faculty-uni">Brasil</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1621,7 +1591,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Brunna Boaventura</div>
           <div class="faculty-title">Diretora Técnica</div>
           <div class="faculty-uni">COACH NUTRICIONAL®</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1629,7 +1599,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Brunno Falcão</div>
           <div class="faculty-title">CEO Science Play</div>
           <div class="faculty-uni">COACH NUTRICIONAL®</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1637,7 +1607,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Lorena Tomazett</div>
           <div class="faculty-title">Especialista</div>
           <div class="faculty-uni">Brasil</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1645,7 +1615,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Roberta Carbonari</div>
           <div class="faculty-title">Especialista</div>
           <div class="faculty-uni">Brasil</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1653,7 +1623,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Fabrício Assini</div>
           <div class="faculty-title">Especialista</div>
           <div class="faculty-uni">Brasil</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1661,7 +1631,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Fernanda Landeiro</div>
           <div class="faculty-title">Especialista</div>
           <div class="faculty-uni">Brasil</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
         <div class="faculty-card">
@@ -1669,7 +1639,7 @@ img { max-width: 100%; display: block; }
           <div class="faculty-name">Thaisa Leal</div>
           <div class="faculty-title">Especialista</div>
           <div class="faculty-uni">Brasil</div>
-          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional" class="faculty-logo">
+          <img src="https://res.cloudinary.com/dxqrofhcm/image/upload/v1234567890/coach-nutricional-logo.png" alt="Coach Nutricional®" class="faculty-logo">
         </div>
 
       </div>
@@ -1815,10 +1785,6 @@ img { max-width: 100%; display: block; }
   </div>
 </footer>
 
-<button class="mobile-sticky-cta" id="mobile-sticky-cta" onclick="scrollTo('#investimento')">
-  Garantir Minha Vaga
-</button>
-
 <!-- ===== JAVASCRIPT ===== -->
 <script>
 // Smooth scroll
@@ -1856,40 +1822,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Mobile sticky CTA appears after the hero CTA leaves the viewport
-const mobileStickyCta = document.getElementById('mobile-sticky-cta');
-const heroCta = document.getElementById('hero-cta');
-const mobileMedia = window.matchMedia('(max-width: 768px)');
-
-function syncMobileStickyCta() {
-  if (!mobileStickyCta || !heroCta) return;
-  if (!mobileMedia.matches) {
-    mobileStickyCta.classList.remove('is-visible');
-    return;
-  }
-
-  const rect = heroCta.getBoundingClientRect();
-  const heroCtaPassed = rect.bottom < 0;
-  mobileStickyCta.classList.toggle('is-visible', heroCtaPassed);
-}
-
-if (mobileStickyCta && heroCta) {
-  const heroCtaObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!mobileMedia.matches) {
-        mobileStickyCta.classList.remove('is-visible');
-        return;
-      }
-      mobileStickyCta.classList.toggle('is-visible', !entry.isIntersecting);
-    });
-  }, { threshold: 0.05 });
-
-  heroCtaObserver.observe(heroCta);
-  window.addEventListener('resize', syncMobileStickyCta);
-  window.addEventListener('orientationchange', syncMobileStickyCta);
-  syncMobileStickyCta();
-}
 </script>
 
 </body>
